@@ -83,5 +83,24 @@
             //Assert
             $this->assertEquals("Lord of the Rings", $result);
         }
+        //Ignores numbers and other charactors inputs
+        //input -> fahrenheit 451!
+        //output -> Fahrenheit 451!
+        function test_makeTitleCase_ignoreNumbers()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "fahrenheit 451!"
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Fahrenheit 451!")
+        }
+
+        //Ignores numbers and other charactors in the beginning of title
+        //input ->
+        //output ->
     }
 ?>
