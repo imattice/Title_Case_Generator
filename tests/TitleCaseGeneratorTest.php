@@ -90,17 +90,29 @@
         {
             //Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "fahrenheit 451!"
+            $input = "fahrenheit 451!";
 
             //Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             //Assert
-            $this->assertEquals("Fahrenheit 451!")
+            $this->assertEquals("Fahrenheit 451!", $result);
         }
 
         //Ignores numbers and other charactors in the beginning of title
-        //input ->
-        //output ->
+        //input -> 12 angry men
+        //output -> 12 Angry Men
+        function test_makeTitleCase_ignoreFirstNumber()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "12 angry men";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("12 Angry Men", $result);
+        }
     }
 ?>
