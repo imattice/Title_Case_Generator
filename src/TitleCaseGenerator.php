@@ -13,7 +13,6 @@
 
                 if(in_array($word, $conjunction))
                 {
-                    //add lower case function here before the $word
                     if ($word == $input_array_of_words[0]) {
                         array_push($output_titlecased, ucfirst($word));
                     } else {
