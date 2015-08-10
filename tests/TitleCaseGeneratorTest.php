@@ -21,19 +21,19 @@
         }
 
         //tests for capitalization in multiple word titles
-        //input -> the little mermaid
-        //output -> The Little Mermaid
+        //input -> little mermaid
+        //output -> Little Mermaid
         function test_makeTitleCase_multipleWords()
         {
             //Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "the little mermaid";
+            $input = "little mermaid";
 
             //Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             //Assert
-            $this->assertEquals("The Little Mermaid", $result);
+            $this->assertEquals("Little Mermaid", $result);
         }
 
         //Does not capitalize common conjuctions
