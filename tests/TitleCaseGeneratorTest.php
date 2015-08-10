@@ -114,5 +114,21 @@
             //Assert
             $this->assertEquals("12 Angry Men", $result);
         }
+        //Maintains capitalization for words with capital letters mid-word
+        //input -> McChicken
+        //output -> McChicken
+        function test_makeTitleCase_mcChicken()
+        {
+
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "mcChicken";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("McChicken", $result);
+        }
     }
 ?>
