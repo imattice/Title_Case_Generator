@@ -51,5 +51,21 @@
             //Assert
             $this->assertEquals("Harry Potter and the Sorcerers Stone", $result);
         }
+
+        //Capitalizes conjunction if it is the first word
+        //input -> of mice and men
+        //output -> Of Mice and Men
+        function test_makeTitleCase_firstConjunction()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "of mice and men";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Of Mice and Men", $result);
+        }
     }
 ?>
