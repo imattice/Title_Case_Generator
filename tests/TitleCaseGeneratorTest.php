@@ -67,5 +67,21 @@
             //Assert
             $this->assertEquals("Of Mice and Men", $result);
         }
+
+        //Uncapitalizes conjunctions in middle of title if input has capitalized conjunction
+        //input -> Lord Of The Rings
+        //output -> Lord of the Rings
+        function test_makeTitleCase_ucConjunctionInput()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "Lord Of The Rings";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Lord of the Rings", $result);
+        }
     }
 ?>
