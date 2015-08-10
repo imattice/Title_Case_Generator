@@ -4,7 +4,8 @@
     {
         function makeTitleCase($input_title)
         {
-            $input_array_of_words = explode(' ', $input_title);
+            $user_input = strtolower($input_title);
+            $input_array_of_words = explode(' ', $user_input);
             $output_titlecased = array();
             foreach ($input_array_of_words as $word)
             {
@@ -16,7 +17,7 @@
                     if ($word == $input_array_of_words[0]) {
                         array_push($output_titlecased, ucfirst($word));
                     } else {
-                        array_push($output_titlecased, $word);
+                        array_push($output_titlecased, lcfirst($word));
                     }
 
                 } else {
